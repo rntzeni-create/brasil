@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil das Maravilhas - Guia Completo de Turismo, Biomas e Ritmos</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brGreen: '#008744',
+                        brGreenDark: '#005c2e',
+                        brYellow: '#ffda44',
+                        brBlue: '#002776',
+                        brBlueDark: '#00194a',
+                        darkBg: '#090d16',
+                        cardBg: '#131b2e'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #008744;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffda44;
+        }
+
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 218, 68, 0.15);
+        }
+
+        .gradient-text-br {
+            background: linear-gradient(135deg, #ffda44 0%, #00ff80 50%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .flag-accent {
+            background: linear-gradient(90deg, #008744 0%, #ffda44 50%, #002776 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 218, 68, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(0, 135, 68, 0.3);
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 15px rgba(0, 135, 68, 0.2); }
+            100% { box-shadow: 0 0 35px rgba(255, 218, 68, 0.4); }
+        }
+
+        .equalizer-bar {
+            animation: bounce 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes bounce {
+            0% { height: 15%; }
+            100% { height: 95%; }
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-brYellow selection:text-brBlueDark">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full flag-accent p-0.5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-darkBg rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-earth-americas text-brYellow text-lg"></i>
+                    </div>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-xl tracking-tight text-white block leading-none">BRASIL</span>
+                    <span class="text-[10px] text-brYellow uppercase tracking-widest font-semibold">Das Maravilhas</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#destinos" class="hover:text-brYellow transition-colors flex items-center gap-2"><i class="fa-solid fa-map-location-dot text-brGreen"></i> 27 Cidades</a>
+                <a href="#biomas" class="hover:text-brYellow transition-colors flex items-center gap-2"><i class="fa-solid fa-leaf text-brGreen"></i> Sons dos Biomas</a>
+                <a href="#musica" class="hover:text-brYellow transition-colors flex items-center gap-2"><i class="fa-solid fa-music text-brYellow"></i> Ritmos & Músicas</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#destinos" class="bg-gradient-to-r from-brGreen to-brGreenDark hover:from-brGreenDark hover:to-brGreen text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-brGreen/30 transition-all">
+                    Explorar Estados
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Elementos decorativos de fundo -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-brGreen/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 -right-20 w-96 h-96 bg-brYellow/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 left-1/3 w-80 h-80 bg-brBlue/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cardBg border border-brYellow/30 text-brYellow text-xs font-semibold mb-6 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-brGreen animate-ping"></span>
+                Uma jornada por 26 Estados + Distrito Federal
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-5xl mx-auto">
+                Sinta a Energia, a Natureza e a Cultura de um <span class="gradient-text-br">Brasil Incomparável</span>
+            </h1>
+
+            <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Descubra a cidade mais famosa de cada estado brasileiro, os pontos turísticos imperdíveis, o canto único de nossos 6 biomas e a alma vibrante da nossa música.
+            </p>
+
+            <!-- Barra de busca rápida -->
+            <div class="mt-10 max-w-2xl mx-auto relative">
+                <div class="glass-panel p-2 rounded-2xl shadow-2xl flex items-center gap-2 border border-slate-700">
+                    <i class="fa-solid fa-magnifying-glass text-slate-400 pl-4"></i>
+                    <input type="text" id="searchInput" placeholder="Busque por estado, cidade ou ponto turístico (ex: Rio de Janeiro, Jalapão, Manaus)..." class="w-full bg-transparent text-white placeholder-slate-400 focus:outline-none text-sm py-2">
+                    <button onclick="filterDestinationBySearch()" class="bg-brYellow text-brBlueDark hover:bg-yellow-300 font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-all shrink-0">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Destaques em números -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="glass-panel p-4 rounded-xl text-center border-t-2 border-brGreen">
+                    <span class="text-3xl font-extrabold text-brYellow">27</span>
+                    <p class="text-xs text-slate-400 font-medium uppercase mt-1">Cidades Ícones</p>
+                </div>
+                <div class="glass-panel p-4 rounded-xl text-center border-t-2 border-brYellow">
+                    <span class="text-3xl font-extrabold text-brGreen">6</span>
+                    <p class="text-xs text-slate-400 font-medium uppercase mt-1">Biomas Naturais</p>
+                </div>
+                <div class="glass-panel p-4 rounded-xl text-center border-t-2 border-brBlue">
+                    <span class="text-3xl font-extrabold text-blue-400">8+</span>
+                    <p class="text-xs text-slate-400 font-medium uppercase mt-1">Gêneros Musicais</p>
+                </div>
+                <div class="glass-panel p-4 rounded-xl text-center border-t-2 border-emerald-400">
+                    <span class="text-3xl font-extrabold text-white">100%</span>
+                    <p class="text-xs text-slate-400 font-medium uppercase mt-1">Orgulho Nacional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinos" class="py-20 relative bg-slate-950/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-brYellow font-bold text-xs uppercase tracking-widest block mb-2"><i class="fa-solid fa-compass text-brGreen"></i> Guia Completo por Estado</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">As 27 Cidades Mais Famosas do Brasil</h2>
+                    <p class="text-slate-400 text-sm mt-2 max-w-xl">
+                        Uma seleção imperdível contendo 1 cidade por estado + DF, com seu principal ponto turístico e atrações.
+                    </p>
+                </div>
+
+                <!-- Filtros por Região -->
+                <div class="flex flex-wrap gap-2" id="regionFilters">
+                    <button onclick="filterRegion('all')" class="region-btn active bg-brGreen text-white px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all shadow-md">Todos (27)</button>
+                    <button onclick="filterRegion('Norte')" class="region-btn bg-cardBg hover:bg-slate-800 text-slate-300 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all border border-slate-800">Norte</button>
+                    <button onclick="filterRegion('Nordeste')" class="region-btn bg-cardBg hover:bg-slate-800 text-slate-300 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all border border-slate-800">Nordeste</button>
+                    <button onclick="filterRegion('Centro-Oeste')" class="region-btn bg-cardBg hover:bg-slate-800 text-slate-300 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all border border-slate-800">Centro-Oeste</button>
+                    <button onclick="filterRegion('Sudeste')" class="region-btn bg-cardBg hover:bg-slate-800 text-slate-300 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all border border-slate-800">Sudeste</button>
+                    <button onclick="filterRegion('Sul')" class="region-btn bg-cardBg hover:bg-slate-800 text-slate-300 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all border border-slate-800">Sul</button>
+                </div>
+            </div>
+
+            <!-- Grid de Estados/Cidades -->
+            <div id="statesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Javascript preencherá os 27 estados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <section id="biomas" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brGreen font-bold text-xs uppercase tracking-widest block mb-2"><i class="fa-solid fa-tree text-brYellow"></i> Riqueza Natural & Paisagens</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Sons & Encantos dos 6 Biomas Brasileiros</h2>
+                <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                    Clique em qualquer bioma para acionar nosso gerador de **áudio ambiente em tempo real** e imergir na atmosfera sonora natural do Brasil.
+                </p>
+            </div>
+
+            <!-- Painel de Biomas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="biomesGrid">
+                <!-- Javascript vai injetar os 6 biomas aqui -->
+            </div>
+
+            <!-- Controles Globais do Áudio do Bioma -->
+            <div class="mt-12 glass-panel p-6 rounded-2xl border border-brGreen/30 flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+                <div class="flex items-center gap-4">
+                    <div id="soundStatusIcon" class="w-12 h-12 rounded-xl bg-brGreen/20 flex items-center justify-center text-brYellow text-xl">
+                        <i class="fa-solid fa-volume-xmark"></i>
+                    </div>
+                    <div>
+                        <h4 id="currentPlayingBiome" class="font-bold text-white text-base">Nenhum som ativo</h4>
+                        <p id="currentPlayingDesc" class="text-xs text-slate-400">Selecione um bioma acima para ativar o áudio sintetizado</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 w-full md:w-auto">
+                    <i class="fa-solid fa-volume-low text-slate-400 text-xs"></i>
+                    <input type="range" id="biomeVolume" min="0" max="1" step="0.05" value="0.5" class="w-full md:w-32 accent-brGreen cursor-pointer" oninput="updateBiomeVolume(this.value)">
+                    <i class="fa-solid fa-volume-high text-slate-400 text-xs"></i>
+                    <button onclick="stopBiomeSound()" class="bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/40 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all">
+                        Parar Áudio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="musica" class="py-20 relative bg-slate-950/80 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna Esquerda: Texto e Ritmos Interativos -->
+                <div class="lg:col-span-6">
+                    <span class="text-brYellow font-bold text-xs uppercase tracking-widest block mb-2"><i class="fa-solid fa-compact-disc text-brGreen"></i> Identidade Sonora</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-6">A Batida & Harmonia do Povo Brasileiro</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-8">
+                        A música brasileira é reconhecida internacionalmente pela sua riqueza rítmica e poesia sincopada. Experimente os geradores de ritmo de áudio abaixo para ouvir a base percussiva de cada gênero tradicional.
+                    </p>
+
+                    <!-- Lista de Geradores de Ritmo -->
+                    <div class="space-y-4">
+                        <div class="glass-panel p-4 rounded-xl flex items-center justify-between border border-slate-800 hover:border-brYellow/40 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-brGreen/20 flex items-center justify-center text-brYellow font-bold">
+                                    <i class="fa-solid fa-drum"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Samba de Roda</h4>
+                                    <p class="text-xs text-slate-400">Surdo, tamborim e agogô sincopado</p>
+                                </div>
+                            </div>
+                            <button onclick="playRhythm('samba')" class="bg-brGreen hover:bg-brGreenDark text-white px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-play"></i> Batida
+                            </button>
+                        </div>
+
+                        <div class="glass-panel p-4 rounded-xl flex items-center justify-between border border-slate-800 hover:border-brYellow/40 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-brBlue/40 flex items-center justify-center text-brYellow font-bold">
+                                    <i class="fa-solid fa-guitar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Bossa Nova</h4>
+                                    <p class="text-xs text-slate-400">Violão suave, acento de jazz e elegância</p>
+                                </div>
+                            </div>
+                            <button onclick="playRhythm('bossanova')" class="bg-brBlue hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-play"></i> Harmonia
+                            </button>
+                        </div>
+
+                        <div class="glass-panel p-4 rounded-xl flex items-center justify-between border border-slate-800 hover:border-brYellow/40 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center text-brYellow font-bold">
+                                    <i class="fa-solid fa-music"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Baião & Forró</h4>
+                                    <p class="text-xs text-slate-400">Zabumba vibrante e ritmo nordestino</p>
+                                </div>
+                            </div>
+                            <button onclick="playRhythm('forro')" class="bg-brYellow text-brBlueDark hover:bg-yellow-300 px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-play"></i> Baião
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Seleção de Músicas Famosas em Destaque -->
+                <div class="lg:col-span-6">
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-brYellow/20 relative shadow-2xl">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-serif text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-record-vinyl text-brYellow animate-spin-slow"></i> Grandes Clássicos da MPB
+                            </h3>
+                            <span class="text-[10px] bg-brGreen/30 text-brYellow px-3 py-1 rounded-full font-bold uppercase">Patrimônio</span>
+                        </div>
+
+                        <!-- Lista de Músicas com Detalhes e Letras -->
+                        <div class="space-y-4 max-h-[420px] overflow-y-auto pr-2" id="songPlaylist">
+                            <!-- Injetado por JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="stateModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-opacity">
+        <div class="glass-panel w-full max-w-3xl rounded-3xl border border-brYellow/30 overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-20 w-10 h-10 bg-slate-900/80 hover:bg-slate-800 text-white rounded-full flex items-center justify-center transition-all border border-slate-700">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modalContent" class="overflow-y-auto p-6 sm:p-8">
+                <!-- Conteúdo dinâmico montado via Javascript -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black py-12 border-t border-slate-800 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-8 h-8 rounded-full flag-accent p-0.5">
+                    <div class="w-full h-full bg-black rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-brYellow text-xs"></i>
+                    </div>
+                </div>
+                <span class="font-serif font-bold text-white tracking-widest">BRASIL DAS MARAVILHAS</span>
+            </div>
+            <p class="max-w-2xl mx-auto text-xs text-slate-400 leading-relaxed mb-6">
+                Projeto dedicado a celebrar a biodiversidade, a riqueza turística dos 26 estados + Distrito Federal, e a incrível musicalidade brasileira.
+            </p>
+            <div class="flex justify-center gap-6 text-xs text-slate-400 uppercase font-semibold">
+                <a href="#destinos" class="hover:text-brYellow transition-colors">Destinos</a>
+                <a href="#biomas" class="hover:text-brYellow transition-colors">Biomas</a>
+                <a href="#musica" class="hover:text-brYellow transition-colors">Música</a>
+            </div>
+            <p class="mt-8 text-[11px] text-slate-400">© 2026 Brasil das Maravilhas. Feito para exaltar a nossa terra.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* ==========================================================================
+           DADOS DOS 27 ESTADOS DO BRASIL (CIDADE MAIS FAMOSA, PONTO TURÍSTICO E ATRAÇÕES)
+           ========================================================================== */
+        const statesData = [
+            {
+                uf: "AC",
+                state: "Acre",
+                region: "Norte",
+                city: "Rio Branco",
+                spot: "Parque Ambiental Chico Mendes & Gameleira",
+                desc: "Cidade repleta de história seringueira e natureza amazônica exuberante às margens do Rio Acre.",
+                todo: ["Visitar o Calçadão da Gameleira", "Conhecer a Casa do Seringueiro", "Passear pelo Parque Chico Mendes", "Provar a baixaria (prato típico)"],
+                img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "AL",
+                state: "Alagoas",
+                region: "Nordeste",
+                city: "Maragogi",
+                spot: "Piscinas Naturais (Galés de Maragogi)",
+                desc: "Conhecido como o 'Caribe Brasileiro', destaca-se por suas águas cristalinas em tons azul-turquesa.",
+                todo: ["Fazer passeios de catamarã às Galés", "Mergulhar com peixes tropicais", "Conhecer a Praia de Antunes", "Navegar de buggy pelas praias do norte"],
+                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "AP",
+                state: "Amapá",
+                region: "Norte",
+                city: "Macapá",
+                spot: "Monumento Marco Zero do Equador",
+                desc: "Única capital brasileira cortada pela Linha do Equador e banhada pelo gigantesco Rio Amazonas.",
+                todo: ["Pisotear os dois hemisférios no Marco Zero", "Visitar a imponente Fortaleza de São José", "Assistir ao Equinócio", "Navegar pelo Rio Amazonas"],
+                img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "AM",
+                state: "Amazonas",
+                region: "Norte",
+                city: "Manaus",
+                spot: "Teatro Amazonas & Encontro das Águas",
+                desc: "Portal da maior floresta tropical do mundo, unindo arquitetura clássica da opulência da borracha e natureza.",
+                todo: ["Assistir a um espetáculo no Teatro Amazonas", "Navegar no Encontro dos Rios Negro e Solimões", "Visitar aldeias indígenas", "Explorar o Anavilhanas"],
+                img: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "BA",
+                state: "Bahia",
+                region: "Nordeste",
+                city: "Salvador",
+                spot: "Pelourinho & Farol da Barra",
+                desc: "O coração cultural do Brasil, rico em história, batuques de olodum, culinária aromática e energia acolhedora.",
+                todo: ["Caminhar pelas ladeiras do Pelourinho", "Andar no Elevador Lacerda", "Provar acarajé no Rio Vermelho", "Assistir ao pôr do sol no Farol da Barra"],
+                img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "CE",
+                state: "Ceará",
+                region: "Nordeste",
+                city: "Jijoca de Jericoacoara",
+                spot: "Duna do Pôr do Sol & Pedra Furada",
+                desc: "Vila de pescadores mística entre dunas, lagoas cristalinas e ventos ideais para kitesurf.",
+                todo: ["Relaxar nas redes aquáticas da Lagoa do Paraíso", "Subir a Duna do Pôr do Sol", "Caminhar até a Pedra Furada", "Passear de quadriciclo pelas dunas"],
+                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "DF",
+                state: "Distrito Federal",
+                region: "Centro-Oeste",
+                city: "Brasília",
+                spot: "Praça dos Três Poderes & Catedral Metropolitana",
+                desc: "A capital modernista projetada por Oscar Niemeyer e Lúcio Costa em formato de avião.",
+                todo: ["Admirar os vitrais da Catedral de Brasília", "Visitar o Congresso Nacional e o Planalto", "Assistir ao pôr do sol no Lago Paranoá", "Conhecer a Igrejinha N. Sra. de Fátima"],
+                img: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "ES",
+                state: "Espírito Santo",
+                region: "Sudeste",
+                city: "Vila Velha",
+                spot: "Convento da Penha",
+                desc: "Cidade litorânea histórica famosa por seu santuário centenário no topo do penhasco e moqueca capixaba.",
+                todo: ["Subir ao Convento da Penha com vista panorâmica", "Aproveitar as praias de Itaparica e da Costa", "Provar a autêntica moqueca capixaba em panela de barro", "Visitar a Fábrica Garoto"],
+                img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "GO",
+                state: "Goiás",
+                region: "Centro-Oeste",
+                city: "Pirenópolis",
+                spot: "Centro Histórico & Cachoeiras do Abade",
+                desc: "Charmosa cidade colonial cercada por dezenas de cachoeiras cristalinas e casarios preservados.",
+                todo: ["Passear pelas ruas de pedra centenárias", "Tomar banho na Cachoeira do Abade e Lazaro", "Provar o empadão goiano", "Participar das Cavalhadas (época festiva)"],
+                img: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "MA",
+                state: "Maranhão",
+                region: "Nordeste",
+                city: "Barreirinhas",
+                spot: "Parque Nacional dos Lençóis Maranhenses",
+                desc: "O portal de entrada para o deserto de dunas brancas preenchidas por lagoas de água doce e límpida.",
+                todo: ["Navegar de 4x4 até a Lagoa Azul e Lagoa Bonita", "Fazer um voo panorâmico sobre o parque", "Passear de voadeira pelo Rio Preguiças", "Aproveitar Atins"],
+                img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "MT",
+                state: "Mato Grosso",
+                region: "Centro-Oeste",
+                city: "Chapada dos Guimarães",
+                spot: "Cachoeira Véu de Noiva & Mirante do Centro da América",
+                desc: "Parque nacional imponente com paredões avermelhados, cachoeiras e o centro geodésico da América do Sul.",
+                todo: ["Fotografar a Cachoeira Véu de Noiva", "Trilhar o Circuito das Cachoeiras", "Apreciar o pôr do sol no Mirante do Alto do Céu", "Conhecer a Cidade de Pedra"],
+                img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "MS",
+                state: "Mato Grosso do Sul",
+                region: "Centro-Oeste",
+                city: "Bonito",
+                spot: "Gruta do Lago Azul & Rio da Prata",
+                desc: "A capital mundial do Ecoturismo, famosa pelas flutuações em rios de transparência cristalina surreal.",
+                todo: ["Fazer flutuação no Rio da Prata e Aquário Natural", "Admirar as estalactites da Gruta do Lago Azul", "Aventurar-se no Abismo Anhumas", "Visitar o Parque das Cachoeiras"],
+                img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "MG",
+                state: "Minas Gerais",
+                region: "Sudeste",
+                city: "Ouro Preto",
+                spot: "Igreja São Francisco de Assis & Centro Histórico",
+                desc: "Jóia do barroco brasileiro com ladeiras de paralelepípedo, igrejas ornamentadas com ouro e gastronomia inigualável.",
+                todo: ["Contemplar obras de Aleijadinho nas igrejas", "Explorar antigas minas de ouro", "Provar pão de queijo, tutú e feijão tropeiro", "Caminhar pelas feirinhas de pedra-sabão"],
+                img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "PA",
+                state: "Pará",
+                region: "Norte",
+                city: "Belém",
+                spot: "Mercado Ver-o-Peso & Estação das Docas",
+                desc: "Metrópole da Amazônia com culinária vibrante (Açaí, Tacacá, Tucupi) e o portal do Rio Guamá.",
+                todo: ["Provar o açaí tradicional no Mercado Ver-o-Peso", "Passear ao entardecer na Estação das Docas", "Visitar o Mangal das Garças", "Navegar até a Ilha do Combú"],
+                img: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "PB",
+                state: "Paraíba",
+                region: "Nordeste",
+                city: "João Pessoa",
+                spot: "Pôr do Sol na Praia do Jacaré & Farol do Cabo Branco",
+                desc: "O ponto mais oriental das Américas, onde o sol nasce primeiro no continente com praias calmas e arborizadas.",
+                todo: ["Ouvir o Bolero de Ravel ao pôr do sol na Praia do Jacaré", "Visitar o Farol do Cabo Branco", "Relaxar nas Piscinas Naturais de Picãozinho", "Caminhar pela Orla de Cabo Branco"],
+                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "PR",
+                state: "Paraná",
+                region: "Sul",
+                city: "Foz do Iguaçu",
+                spot: "Cataratas do Iguaçu (Uma das 7 Maravilhas da Natureza)",
+                desc: "Espetáculo majestoso de mais de 275 quedas d'água na fronteira entre Brasil e Argentina.",
+                todo: ["Sentir a névoa na Garganta do Diabo", "Fazer o passeio de barco Macuco Safári", "Visitar o Parque das Aves", "Conhecer a Usina de Itaipu"],
+                img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "PE",
+                state: "Pernambuco",
+                region: "Nordeste",
+                city: "Olinda / Recife",
+                spot: "Centro Histórico de Olinda & Praia de Boa Viagem",
+                desc: "Berço do frevo e maracatu, com casarios coloridos, pontes históricas e folclore contagiante.",
+                todo: ["Subir o Alto da Sé em Olinda e ver os bonecos gigantes", "Visitar o Instituto Ricardo Brennand no Recife", "Passear pelo Recife Antigo", "Provar bolo de rolo tradicional"],
+                img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "PI",
+                state: "Piauí",
+                region: "Nordeste",
+                city: "São Raimundo Nonato",
+                spot: "Parque Nacional da Serra da Capivara",
+                desc: "Maior concentração de arte rupestre das Américas e patrimônio mundial com paredões pré-históricos.",
+                todo: ["Admirar as pinturas rupestres na Baixada dos Tocaio", "Fotografar a famosa Pedra Furada", "Visitar o Museu da Natureza", "Assistir ao voo das andorinhas no paredão"],
+                img: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "RJ",
+                state: "Rio de Janeiro",
+                region: "Sudeste",
+                city: "Rio de Janeiro",
+                spot: "Cristo Redentor & Pão de Açúcar",
+                desc: "A Cidade Maravilhosa, mundialmente famosa por suas montanhas à beira-mar, samba e praias históricas.",
+                todo: ["Subir de trem até o Cristo Redentor no Corcovado", "Andar de bondinho no Pão de Açúcar", "Caminhar no calçadão de Copacabana e Ipanema", "Aproveitar o pôr do sol no Arpoador"],
+                img: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "RN",
+                state: "Rio Grande do Norte",
+                region: "Nordeste",
+                city: "Natal",
+                spot: "Dunas de Genipabu & Maior Cajueiro do Mundo",
+                desc: "A Cidade do Sol, conhecida por dunas douradas, passeios de buggy radicais e praias exuberantes.",
+                todo: ["Passear de buggy com emoção nas dunas de Genipabu", "Conhecer o Maior Cajueiro do Mundo em Pirangi", "Visitar a Forte dos Reis Magos", "Navegar em Maracajaú"],
+                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "RS",
+                state: "Rio Grande do Sul",
+                region: "Sul",
+                city: "Gramado",
+                spot: "Lago Negro & Rua Torta",
+                desc: "Encantador refúgio europeu na Serra Gaúcha com arquitetura enxaimel, chocolates e alta gastronomia.",
+                todo: ["Passear de pedalinho no Lago Negro", "Tirar fotos na icônica Rua Torta", "Visitar fábricas artesanais de chocolate", "Aproveitar a rodada de fondue ao estilo gaúcho"],
+                img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "RO",
+                state: "Rondônia",
+                region: "Norte",
+                city: "Porto Velho",
+                spot: "Estrada de Ferro Madeira-Mamoré & Rio Madeira",
+                desc: "Cidade repleta de memórias da construção ferroviária pioneira e do grandioso Rio Madeira.",
+                todo: ["Conhecer o Complexo da Estrada de Ferro Madeira-Mamoré", "Assistir ao pôr do sol no Rio Madeira", "Provar peixes amazônicos (tambaqui, pirarucu)", "Ver as Três Caixas D'Água"],
+                img: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "RR",
+                state: "Roraima",
+                region: "Norte",
+                city: "Uiramutã / Boa Vista",
+                spot: "Monte Roraima & Praça das Águas",
+                desc: "Território do tepui milenar Monte Roraima, uma das formações geológicas mais antigas do planeta.",
+                todo: ["Organizar a expedição de trekking ao Monte Roraima", "Conhecer a Praça das Águas em Boa Vista", "Banhar-se no Rio Branco", "Visitar as cachoeiras de Uiramutã"],
+                img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "SC",
+                state: "Santa Catarina",
+                region: "Sul",
+                city: "Florianópolis",
+                spot: "Praia da Joaquina & Ponte Hercílio Luz",
+                desc: "A 'Ilha da Magia', misturando dezenas de praias paradisíacas, dunas para sandboard e vida noturna.",
+                todo: ["Atravessar ou fotografar a Ponte Hercílio Luz ilumiada", "Praticar sandboard nas dunas da Joaquina", "Visitar a charmosa Vila de Santo Antônio de Lisboa", "Curtir a Lagoa da Conceição"],
+                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "SP",
+                state: "São Paulo",
+                region: "Sudeste",
+                city: "São Paulo",
+                spot: "Avenida Paulista & Parque Ibirapuera",
+                desc: "A megalópole multicultural do Brasil, centro gastronômico, financeiro, artístico e de entretenimento.",
+                todo: ["Caminhar na Avenida Paulista no domingo", "Visitar o MASP (Museu de Arte de São Paulo)", "Passear no Parque Ibirapuera", "Provar sanduíche de mortadela no Mercadão"],
+                img: "https://images.unsplash.com/photo-1543059509-6d53d2426815?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "SE",
+                state: "Sergipe",
+                region: "Nordeste",
+                city: "Canindé de São Francisco / Aracaju",
+                spot: "Cânion do Xingó (Rio São Francisco) & Orla de Atalaia",
+                desc: "Gigantescos paredões alaranjados esculpidos pelas águas esverdeadas do 'Velho Chico'.",
+                todo: ["Navegar de catamarã pelo Cânion do Xingó", "Nadar na Gruta do Talhado", "Passear na Orla de Atalaia e Passarela do Caranguejo", "Conhecer a Passarela dos Lagos"],
+                img: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                uf: "TO",
+                state: "Tocantins",
+                region: "Norte",
+                city: "Mateiros (Jalapão)",
+                spot: "Fervedouros do Jalapão & Dunas",
+                desc: "Oásis do cerrado brasileiro repleto de fervedouros onde é impossível afundar devido à pressão das nascentes.",
+                todo: ["Flutuar nas águas borbulhantes dos Fervedouros", "Assistir ao pôr do sol nas Dunas do Jalapão", "Banhar-se na Cachoeira da Formiga", "Ver o Capão da Serra"],
+                img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        /* ==========================================================================
+           DADOS DOS 6 BIOMAS BRASILEIROS E REGRAS DE SINTETIZAÇÃO DE ÁUDIO
+           ========================================================================== */
+        const biomesData = [
+            {
+                id: "amazonia",
+                name: "Amazônia",
+                type: "Floresta Tropical Úmida",
+                fauna: "Onça-pintada, Boto-cor-de-rosa, Harpia, Arara-azul",
+                desc: "Maior biodiversidade do planeta. Florestas densas, rios imensos e chuva tropical constante.",
+                soundType: "rain_forest",
+                img: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: "cerrado",
+                name: "Cerrado",
+                type: "Savana Brasileira",
+                fauna: "Lobo-guará, Tamanduá-bandeira, Tatu-bola, Anta",
+                desc: "O berço das águas do Brasil. Árvores retorcidas, campos abertos, calor e cantos marcantes de cigarras.",
+                soundType: "cicadas_wind",
+                img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: "caatinga",
+                name: "Caatinga",
+                type: "Sertão Semiárido Exclusivo",
+                fauna: "Ararinha-azul, Asa-branca, Sagui-do-nordeste, Carcará",
+                desc: "Único bioma 100% brasileiro. Cactos resistentes, vento seco e uma beleza resiliente sem igual.",
+                soundType: "dry_wind_crickets",
+                img: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: "mata_atlantica",
+                name: "Mata Atlântica",
+                type: "Floresta Tropical Costeira",
+                fauna: "Mico-leão-dourado, Jacutinga, Tucano-de-bico-preto",
+                desc: "Cobre a costa litorânea com montanhas verdejantes, névoa oceânica e o som constante do mar.",
+                soundType: "ocean_birds",
+                img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: "pantanal",
+                name: "Pantanal",
+                type: "Maior Planície Alagável do Mundo",
+                fauna: "Tuiuiú, Tuiuiú, Capivara, Jacaré-do-pantanal, Sucuri",
+                desc: "Santuário ecológico de águas mansas, revoadas espetaculares de pássaros e fauna exuberante.",
+                soundType: "water_birds",
+                img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: "pampa",
+                name: "Pampa",
+                type: "Campos Sulinos",
+                fauna: "Quero-quero, Veado-campeiro, Gato-do-pampa",
+                desc: "Colinas suaves (coxilhas), vento minuano constante e uma vasta imensidão verde gaúcha.",
+                soundType: "open_wind_birds",
+                img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        /* ==========================================================================
+           MÚSICAS E PLAYLISTS FAMOSAS
+           ========================================================================== */
+        const songsList = [
+            {
+                title: "Garota de Ipanema",
+                artist: "Tom Jobim & Vinicius de Moraes",
+                genre: "Bossa Nova",
+                year: "1962",
+                note: "Música brasileira mais gravada da história mundial."
+            },
+            {
+                title: "Aquarela do Brasil",
+                artist: "Ary Barroso",
+                genre: "Samba-Exaltação",
+                year: "1939",
+                note: "Hino lírico do orgulho e exuberância das terras brasileiras."
+            },
+            {
+                title: "Asa Branca",
+                artist: "Luiz Gonzaga & Humberto Teixeira",
+                genre: "Baião / Forró",
+                year: "1947",
+                note: "Hino do Sertão e da resiliência do povo nordestino."
+            },
+            {
+                title: "Mas, Que Nada!",
+                artist: "Jorge Ben Jor",
+                genre: "Samba-Rock / MPB",
+                year: "1963",
+                note: "Sucesso global contagiante que levou a batida brasileira aos 4 cantos do mundo."
+            },
+            {
+                title: "Pais e Filhos",
+                artist: "Legião Urbana",
+                genre: "Rock Nacional / MPB",
+                year: "1989",
+                note: "Poesia profunda da juventude e do rock dos anos 80."
+            },
+            {
+                title: "Evidências",
+                artist: "Chitãozinho & Xororó",
+                genre: "Sertanejo",
+                year: "1990",
+                note: "Considerado o segundo hino nacional cantado em uníssono em todas as festas."
+            }
+        ];
+
+        /* ==========================================================================
+           LÓGICA DE INTERFACE E RENDERING
+           ========================================================================== */
+
+        // Renderiza os cards dos 27 estados
+        function renderStates(items) {
+            const container = document.getElementById("statesGrid");
+            container.innerHTML = "";
+
+            if(items.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12 glass-panel rounded-2xl">
+                        <i class="fa-solid fa-compass-slash text-brYellow text-4xl mb-3"></i>
+                        <h3 class="text-white font-bold text-lg">Nenhum estado ou cidade encontrado</h3>
+                        <p class="text-slate-400 text-xs mt-1">Tente pesquisar com outro termo ou limpe o filtro.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            items.forEach((st) => {
+                const card = document.createElement("div");
+                card.className = "glass-panel rounded-2xl overflow-hidden card-hover border border-slate-800 flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="${st.img}" alt="${st.city}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-brGreen text-white text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                ${st.uf} - ${st.region}
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-xl text-white">${st.city}</h3>
+                            <span class="text-xs font-semibold text-brYellow block mb-2"><i class="fa-solid fa-location-dot text-brGreen"></i> ${st.state}</span>
+                            <p class="text-xs text-slate-300 line-clamp-2 leading-relaxed mb-4">${st.desc}</p>
+                            
+                            <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 mb-2">
+                                <span class="text-[10px] text-brYellow uppercase font-extrabold block mb-0.5">Ponto Turístico Principal:</span>
+                                <span class="text-xs text-white font-medium block">${st.spot}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openModal('${st.uf}')" class="w-full bg-slate-800 hover:bg-brGreen text-white text-xs font-bold py-2.5 rounded-xl uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-slate-700">
+                            <i class="fa-solid fa-eye"></i> O que fazer na cidade
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Renderiza os Biomas
+        function renderBiomes() {
+            const container = document.getElementById("biomesGrid");
+            container.innerHTML = "";
+
+            biomesData.forEach((b) => {
+                const card = document.createElement("div");
+                card.className = "glass-panel p-6 rounded-2xl border border-slate-800 hover:border-brGreen/50 transition-all flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-40 rounded-xl overflow-hidden mb-4">
+                            <img src="${b.img}" alt="${b.name}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent"></div>
+                            <span class="absolute bottom-2 left-2 text-xs font-extrabold text-brYellow uppercase bg-black/60 px-2.5 py-1 rounded-md border border-brYellow/30">
+                                ${b.type}
+                            </span>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-white mb-1">${b.name}</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-3">${b.desc}</p>
+                        <div class="text-[11px] text-slate-400 bg-slate-900/80 p-3 rounded-xl border border-slate-800/80 mb-4">
+                            <span class="text-brGreen font-bold block mb-1">Espécies & Fauna Típica:</span>
+                            ${b.fauna}
+                        </div>
+                    </div>
+                    <button onclick="startBiomeSound('${b.id}')" class="w-full bg-brGreen/20 hover:bg-brGreen text-brYellow hover:text-white border border-brGreen/40 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-volume-high"></i> Ouvir Som do Bioma
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Renderiza Playlist de Músicas
+        function renderSongs() {
+            const container = document.getElementById("songPlaylist");
+            container.innerHTML = "";
+
+            songsList.forEach((s) => {
+                const item = document.createElement("div");
+                item.className = "bg-slate-900/80 p-4 rounded-xl border border-slate-800 flex items-center justify-between hover:border-brYellow/30 transition-all";
+                item.innerHTML = `
+                    <div>
+                        <h4 class="font-bold text-white text-sm">${s.title}</h4>
+                        <p class="text-xs text-brYellow font-medium">${s.artist} <span class="text-slate-400">(${s.year})</span></p>
+                        <p class="text-[11px] text-slate-400 mt-1 italic">${s.note}</p>
+                    </div>
+                    <span class="text-[10px] bg-brBlue/40 text-blue-300 px-2.5 py-1 rounded-md font-bold uppercase border border-blue-500/30 shrink-0">
+                        ${s.genre}
+                    </span>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Filtro por região
+        function filterRegion(region) {
+            document.querySelectorAll(".region-btn").forEach(btn => {
+                btn.classList.remove("active", "bg-brGreen", "text-white");
+                btn.classList.add("bg-cardBg", "text-slate-300");
+            });
+
+            event.target.classList.add("active", "bg-brGreen", "text-white");
+            event.target.classList.remove("bg-cardBg", "text-slate-300");
+
+            if(region === 'all') {
+                renderStates(statesData);
+            } else {
+                const filtered = statesData.filter(s => s.region === region);
+                renderStates(filtered);
+            }
+        }
+
+        // Filtro por texto
+        function filterDestinationBySearch() {
+            const query = document.getElementById("searchInput").value.toLowerCase().trim();
+            if(!query) {
+                renderStates(statesData);
+                return;
+            }
+
+            const filtered = statesData.filter(s => 
+                s.state.toLowerCase().includes(query) ||
+                s.city.toLowerCase().includes(query) ||
+                s.spot.toLowerCase().includes(query) ||
+                s.uf.toLowerCase().includes(query)
+            );
+            renderStates(filtered);
+        }
+
+        document.getElementById("searchInput").addEventListener("keyup", (e) => {
+            if(e.key === "Enter") filterDestinationBySearch();
+        });
+
+        // Abrir Modal do Estado
+        function openModal(uf) {
+            const item = statesData.find(s => s.uf === uf);
+            if(!item) return;
+
+            const modal = document.getElementById("stateModal");
+            const content = document.getElementById("modalContent");
+
+            content.innerHTML = `
+                <div class="relative h-64 -mx-6 -mt-6 sm:-mx-8 sm:-mt-8 mb-6 overflow-hidden">
+                    <img src="${item.img}" alt="${item.city}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/40 to-transparent"></div>
+                    <div class="absolute bottom-4 left-6 sm:left-8">
+                        <span class="bg-brYellow text-brBlueDark text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">
+                            ${item.uf} • ${item.region}
+                        </span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-white">${item.city}</h2>
+                        <p class="text-xs text-brYellow font-medium">${item.state}</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-xs font-bold text-brYellow uppercase tracking-wider mb-1"><i class="fa-solid fa-star text-brGreen"></i> Principal Ponto Turístico</h4>
+                        <p class="text-xl font-bold text-white">${item.spot}</p>
+                        <p class="text-xs text-slate-300 mt-2 leading-relaxed">${item.desc}</p>
+                    </div>
+
+                    <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
+                        <h4 class="text-xs font-bold text-brGreen uppercase tracking-wider mb-3"><i class="fa-solid fa-list-check text-brYellow"></i> O que fazer imperdível em ${item.city}:</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            ${item.todo.map(t => `
+                                <li class="flex items-start gap-2.5 text-xs text-slate-200">
+                                    <i class="fa-solid fa-circle-check text-brYellow mt-0.5 shrink-0"></i>
+                                    <span>${t}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-800 text-xs text-slate-400">
+                        <span><i class="fa-solid fa-plane-departure text-brGreen"></i> Dica: Planeje sua viagem na melhor época do ano.</span>
+                        <button onclick="closeModal()" class="bg-brYellow hover:bg-yellow-300 text-brBlueDark font-bold px-5 py-2 rounded-xl uppercase text-xs">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove("hidden");
+        }
+
+        function closeModal() {
+            document.getElementById("stateModal").classList.add("hidden");
+        }
+
+        /* ==========================================================================
+           WEB AUDIO API - SINTETIZADOR DE SONS DOS BIOMAS & RITMOS
+           ========================================================================== */
+        let audioCtx = null;
+        let activeBiomeNodes = [];
+        let activeRhythmInterval = null;
+        let currentMasterGain = null;
+
+        function initAudioContext() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function stopBiomeSound() {
+            activeBiomeNodes.forEach(n => {
+                try { n.stop(); n.disconnect(); } catch(e){}
+            });
+            activeBiomeNodes = [];
+            
+            document.getElementById("soundStatusIcon").className = "w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 text-xl";
+            document.getElementById("soundStatusIcon").innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
+            document.getElementById("currentPlayingBiome").innerText = "Nenhum som ativo";
+            document.getElementById("currentPlayingDesc").innerText = "Selecione um bioma acima para ativar o áudio sintetizado";
+        }
+
+        function updateBiomeVolume(val) {
+            if (currentMasterGain) {
+                currentMasterGain.gain.setValueAtTime(parseFloat(val), audioCtx.currentTime);
+            }
+        }
+
+        function startBiomeSound(biomeId) {
+            initAudioContext();
+            stopBiomeSound();
+
+            const biome = biomesData.find(b => b.id === biomeId);
+            if (!biome) return;
+
+            // Atualiza UI
+            document.getElementById("soundStatusIcon").className = "w-12 h-12 rounded-xl bg-brGreen/30 flex items-center justify-center text-brYellow text-xl pulse-glow";
+            document.getElementById("soundStatusIcon").innerHTML = `<i class="fa-solid fa-compact-disc animate-spin-slow"></i>`;
+            document.getElementById("currentPlayingBiome").innerText = `Som do Bioma: ${biome.name}`;
+            document.getElementById("currentPlayingDesc").innerText = `Reproduzindo síntese da natureza de ${biome.name}`;
+
+            currentMasterGain = audioCtx.createGain();
+            const volVal = parseFloat(document.getElementById("biomeVolume").value || 0.5);
+            currentMasterGain.gain.setValueAtTime(volVal, audioCtx.currentTime);
+            currentMasterGain.connect(audioCtx.destination);
+
+            // Gerador de ruído rosa/branco para simulação de vento ou chuva
+            const bufferSize = audioCtx.sampleRate * 2;
+            const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const output = noiseBuffer.getChannelData(0);
+            for (let i = 0; i < bufferSize; i++) {
+                output[i] = Math.random() * 2 - 1;
+            }
+
+            const whiteNoise = audioCtx.createBufferSource();
+            whiteNoise.buffer = noiseBuffer;
+            whiteNoise.loop = true;
+
+            const filter = audioCtx.createBiquadFilter();
+
+            if (biome.soundType === "rain_forest") {
+                // Amazônia: Ruído de chuva + modulação de pássaros
+                filter.type = 'lowpass';
+                filter.frequency.value = 1000;
+                whiteNoise.connect(filter);
+                filter.connect(currentMasterGain);
+                whiteNoise.start();
+                activeBiomeNodes.push(whiteNoise);
+
+                // Síntese periódica de canto de pássaro
+                const birdTimer = setInterval(() => {
+                    if (activeBiomeNodes.length === 0) { clearInterval(birdTimer); return; }
+                    playBirdChirp(currentMasterGain);
+                }, 2500);
+
+            } else if (biome.soundType === "cicadas_wind") {
+                // Cerrado: Vento quente + tom agudo de cigarras
+                filter.type = 'bandpass';
+                filter.frequency.value = 400;
+                filter.Q.value = 1;
+                whiteNoise.connect(filter);
+                filter.connect(currentMasterGain);
+                whiteNoise.start();
+                activeBiomeNodes.push(whiteNoise);
+
+                // Tom de cigarras
+                const cicadaOsc = audioCtx.createOscillator();
+                const cicadaGain = audioCtx.createGain();
+                cicadaOsc.type = 'sawtooth';
+                cicadaOsc.frequency.value = 4500;
+                cicadaGain.gain.value = 0.03;
+                cicadaOsc.connect(cicadaGain);
+                cicadaGain.connect(currentMasterGain);
+                cicadaOsc.start();
+                activeBiomeNodes.push(cicadaOsc);
+
+            } else if (biome.soundType === "dry_wind_crickets") {
+                // Caatinga: Vento seco + grilos
+                filter.type = 'lowpass';
+                filter.frequency.value = 300;
+                whiteNoise.connect(filter);
+                filter.connect(currentMasterGain);
+                whiteNoise.start();
+                activeBiomeNodes.push(whiteNoise);
+
+                const cricketOsc = audioCtx.createOscillator();
+                const cricketGain = audioCtx.createGain();
+                cricketOsc.type = 'sine';
+                cricketOsc.frequency.value = 5000;
+                cricketGain.gain.value = 0.02;
+                cricketOsc.connect(cricketGain);
+                cricketGain.connect(currentMasterGain);
+                cricketOsc.start();
+                activeBiomeNodes.push(cricketOsc);
+
+            } else {
+                // Outros biomas: Vento suave e ambiente marinho/pássaros
+                filter.type = 'lowpass';
+                filter.frequency.value = 600;
+                whiteNoise.connect(filter);
+                filter.connect(currentMasterGain);
+                whiteNoise.start();
+                activeBiomeNodes.push(whiteNoise);
+            }
+        }
+
+        // Sintetiza um piado de pássaro tropical
+        function playBirdChirp(destGain) {
+            if (!audioCtx) return;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sine';
+            
+            const now = audioCtx.currentTime;
+            osc.frequency.setValueAtTime(2000, now);
+            osc.frequency.exponentialRampToValueAtTime(3500, now + 0.1);
+            osc.frequency.exponentialRampToValueAtTime(1800, now + 0.2);
+
+            gain.gain.setValueAtTime(0.08, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+
+            osc.connect(gain);
+            gain.connect(destGain);
+            osc.start(now);
+            osc.stop(now + 0.25);
+        }
+
+        // SINTETIZADOR DE RITMOS BRASILEIROS
+        function playRhythm(type) {
+            initAudioContext();
+            if (activeRhythmInterval) {
+                clearInterval(activeRhythmInterval);
+                activeRhythmInterval = null;
+            }
+
+            let step = 0;
+            const tempo = type === 'bossanova' ? 140 : 120; // BPM
+
+            activeRhythmInterval = setInterval(() => {
+                const now = audioCtx.currentTime;
+
+                if (type === 'samba') {
+                    // Batida de Surdo nos passos 0 e 2
+                    if (step % 4 === 0 || step % 4 === 2) {
+                        playDrumSound(80, 0.3, 0.2); // Surdo
+                    }
+                    // Tamborim sincopado
+                    if (step % 2 === 1 || step === 3) {
+                        playDrumSound(600, 0.05, 0.08);
+                    }
+                } else if (type === 'bossanova') {
+                    // Acorde suave de violão (Sintetizado)
+                    if (step === 0 || step === 3 || step === 6) {
+                        playChordSynth([261.63, 329.63, 392.00, 493.88]); // Cmaj7
+                    }
+                } else if (type === 'forro') {
+                    // Baião: Zabumba
+                    if (step % 4 === 0) playDrumSound(90, 0.25, 0.3); // Grave
+                    if (step % 2 === 1) playDrumSound(400, 0.05, 0.1); // Agudo
+                }
+
+                step = (step + 1) % 8;
+            }, (60 / tempo) * 250);
+
+            // Interrompe após 8 segundos automaticamente
+            setTimeout(() => {
+                if (activeRhythmInterval) {
+                    clearInterval(activeRhythmInterval);
+                    activeRhythmInterval = null;
+                }
+            }, 8000);
+        }
+
+        function playDrumSound(freq, duration, vol) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+
+            gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        function playChordSynth(freqs) {
+            freqs.forEach(f => {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.value = f;
+
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.4);
+            });
+        }
+
+        /* ==========================================================================
+           INICIALIZAÇÃO DA APLICAÇÃO
+           ========================================================================== */
+        window.addEventListener("DOMContentLoaded", () => {
+            renderStates(statesData);
+            renderBiomes();
+            renderSongs();
+        });
+    </script>
+</body>
+</html>
